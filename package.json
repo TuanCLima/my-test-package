@@ -10,7 +10,9 @@
     "check-exports": "attw --pack .",
     "lint": "tsc",
     "test": "vitest run",
-    "dev": "vitest --watch"
+    "dev": "vitest --watch",
+    "local-release": "changeset version && changeset publish",
+    "prepublishOnly": "npm run ci"
   },
   "keywords": [
     "demo",
@@ -40,6 +42,7 @@
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.16.2",
+    "@changesets/cli": "^2.27.8",
     "prettier": "^3.3.3",
     "tsup": "^8.2.4",
     "typescript": "^5.6.2",
